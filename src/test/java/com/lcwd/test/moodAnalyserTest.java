@@ -11,7 +11,7 @@ public class moodAnalyserTest {
         Assertions.assertEquals("happy", regex);
     }
     @Test
-    public void analyseMoodwithParameter(){
+    public void analyseMoodwithParameter() throws MoodAnalyserException{
         moodAnalyser ma = new moodAnalyser("I am in sad mood");
         String regex = ma.analyseMood();
         Assertions.assertEquals("sad",regex);
