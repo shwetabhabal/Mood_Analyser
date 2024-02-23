@@ -1,7 +1,14 @@
 package com.lcwd.test;
 
 public class moodAnalyser {
-    public static String analyseMood(String message) {
+    private String message;
+    public moodAnalyser(){
+        this.message = "";
+    }
+    public moodAnalyser(String message){
+        this.message = message;
+    }
+    public String analyseMood() {
         if (message.contains("sad")) {
             return "sad";
         } else {
