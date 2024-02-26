@@ -41,5 +41,15 @@ public class moodAnalyserTest {
             Assertions.assertEquals( e.getMessage(), e.err);
         }
     }
+    @Test
+    public void emptyMoodTest(){
+        try{
+            moodAnalyser ma = new moodAnalyser(" ");
+            ma.analyseMood();
+        }
+        catch (MoodAnalyserException m){
+            Assertions.assertEquals(m.getMessage(),m.err);
+        }
+    }
 
 }
