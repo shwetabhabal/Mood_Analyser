@@ -17,7 +17,7 @@ public class moodAnalyser  {
 
         try{
             if(message.contains("")){
-                throw new MoodAnalyserException(MoodAnalyserException.MoodAnalysisErrors.enterEmpty,"enter mood");
+                throw new MoodAnalyserException(MoodAnalyserException.MoodAnalysisErrors.enterEmpty,"empty");
             }
             else if(message.contains("sad")) {
                 return "sad";
@@ -25,7 +25,7 @@ public class moodAnalyser  {
 
         }
         catch (NullPointerException n){
-            throw new MoodAnalyserException(MoodAnalyserException.MoodAnalysisErrors.enterNull,"enter mood");
+            throw new MoodAnalyserException(MoodAnalyserException.MoodAnalysisErrors.enterNull,"enterNull");
         }
         return "happy";
     }

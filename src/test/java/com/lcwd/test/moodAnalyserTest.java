@@ -31,4 +31,15 @@ public class moodAnalyserTest {
         catch (MoodAnalyserException e){
         }
     }
+    @Test
+    public void nullMoodTest(){
+        try{
+            moodAnalyser ma = new moodAnalyser(null);
+            ma.analyseMood();
+        }
+        catch (MoodAnalyserException e){
+            Assertions.assertEquals( e.getMessage(), e.err);
+        }
+    }
+
 }
